@@ -10,7 +10,7 @@ To build and run this Android app project in Android Studio on your local machin
     - Open Android Studio.
     - Click on "File" in the top menu.
     - Select "New" and then "Project from Version Control."
-    - Choose "Git" and enter the repository URL: `https://github.com/tushant-akar/PollPulse`.
+    - Choose "Git" and enter the repository URL: `https://github.com/iiitv/PollPulse-Kotlin`.
     - Click "Clone" to download the project.
 
 2. Open the Project:
