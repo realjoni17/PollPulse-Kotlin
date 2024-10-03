@@ -18,32 +18,34 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
+
         bottomNavigationView = findViewById(R.id.bottom_navigation_view)
-        bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
+        bottomNavigationView.itemIconTintList = null;
+        bottomNavigationView.setOnItemSelectedListener{ item: MenuItem ->
             when (item.itemId) {
                 R.id.homeFragment -> {
                     loadFragment(HomeFragment())
-                    return@OnNavigationItemSelectedListener true
+                    true
                 }
 
                 R.id.candidateListFragment -> {
                     loadFragment(CandidateListFragment())
-                    return@OnNavigationItemSelectedListener true
+                    true
                 }
 
                 R.id.electionListFragment -> {
                     loadFragment(ElectionListFragment())
-                    return@OnNavigationItemSelectedListener true
+                    true
                 }
 
                 R.id.dashboardFragment -> {
                     loadFragment(DashboardFragment())
-                    return@OnNavigationItemSelectedListener true
+                    true
                 }
 
-                else -> return@OnNavigationItemSelectedListener false
+                else -> false
             }
-        })
+        }
 
         loadFragment(HomeFragment())
     }
